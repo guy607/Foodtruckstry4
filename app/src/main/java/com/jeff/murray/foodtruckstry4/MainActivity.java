@@ -7,22 +7,33 @@ import android.telecom.Call;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Button sides = findViewById(R.id.button);
+        Button drinks = findViewById(R.id.button2);
+        Button sandwich = findViewById(R.id.button3);
+
+        sandwich.setOnClickListener(this);
+        sides.setOnClickListener(this);
+        drinks.setOnClickListener(this);
     }
 
-    final Button button=(Button)findViewById(R.id.button3);
-        button.setOnClickListener(new View.OnClickListener()
-    {
-        @Override
-                public void onClick(View v)
-        {
-            Intent launchactivity = new Intent(MainActivity.this,sandwich_select.xml);
-                startActivity(launchactivity);
+    public void openSandwich_select() {
+        Intent intent = new Intent( this, TestActivity1.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch(v.getId()) {
+            case R.id.button3:
+                openSandwich_select();
+                break;
         }
     }
 }

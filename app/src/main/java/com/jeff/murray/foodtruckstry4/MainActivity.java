@@ -10,7 +10,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     item order = new item[];
-    
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void openSandwich_select() {
         Intent intent = new Intent( this, TestActivity1.class);
+        intent.putExtra("workingOrder", )
         startActivity(intent);
     }
 

@@ -9,6 +9,9 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
+    item order = new item[];
+    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,11 +31,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         startActivity(intent);
     }
 
+    public void openSide_select() {
+        Intent intent = new Intent( this, TestActivity2.class);
+        startActivity(intent);
+    }
+
+    public void openDrink_select() {
+        Intent intent = new Intent( this, drink_activity.class);
+        startActivity(intent);
+    }
+
     @Override
     public void onClick(View v) {
         switch(v.getId()) {
             case R.id.button3:
                 openSandwich_select();
+                break;
+            case R.id.button:
+                openSide_select();
+                break;
+            case R.id.button2:
+                openDrink_select();
                 break;
         }
     }

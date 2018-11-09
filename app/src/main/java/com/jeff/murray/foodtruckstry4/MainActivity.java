@@ -6,9 +6,8 @@ import android.os.Bundle;
 import android.telecom.Call;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     final Button button=(Button)findViewById(R.id.button3);
-        button.setOnClickListener(new View.OnClickListener())
+        button.setOnClickListener(new View.OnClickListener()
     {
         @Override
                 public void onClick(View v)
@@ -43,36 +42,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent launchactivity = new Intent(MainActivity.this,sandwich_select.xml);
                 startActivity(launchactivity);
         }
-    }
-
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.button5:
-                Toast.makeText(this, "Button 5 clicked", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.button6:
-                Toast.makeText(this, "Button 6 clicked", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.button7:
-                Toast.makeText(this, "Button 7 clicked", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.button8:
-                Toast.makeText(this, "Button 8 clicked", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.button9:
-                Toast.makeText(this, "Button 9 clicked", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.button10:
-                Toast.makeText(this, "Button 10 clicked", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.button11:
-                Toast.makeText(this, "Button 11 clicked", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.button12:
-                Toast.makeText(this, "Button 12 clicked", Toast.LENGTH_SHORT).show();
-                break;
-        }
-
     }
 }

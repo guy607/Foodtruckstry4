@@ -6,10 +6,11 @@ import android.os.Bundle;
 import android.telecom.Call;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    item order = new item[];
+    //item order = new item[];
     
 
     @Override
@@ -41,6 +42,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         startActivity(intent);
     }
 
+
+
     @Override
     public void onClick(View v) {
         switch(v.getId()) {
@@ -53,6 +56,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.button2:
                 openDrink_select();
                 break;
+
         }
+
+
     }
 }

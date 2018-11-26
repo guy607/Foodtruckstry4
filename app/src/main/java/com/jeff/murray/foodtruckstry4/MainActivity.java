@@ -8,10 +8,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
 
-    public Item order[] = new Item[10];
 
 
     @Override
@@ -26,6 +27,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         sandwich.setOnClickListener(this);
         sides.setOnClickListener(this);
         drinks.setOnClickListener(this);
+
+        Item order[] = new Item[10];
+        Intent intent = new Intent(this, TestActivity1.class);
+        intent.putExtra("ARRAY", order);
+        startActivity(intent);
     }
 
     public void openSandwich_select() {
